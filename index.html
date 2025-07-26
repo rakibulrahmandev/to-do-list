@@ -27,36 +27,8 @@
                 <input id="input-box" type="text" placeholder="Add your task" spellcheck="false" autocomplete="off" class="bg-transparent py-[15px] pl-[25px] pr-3 flex-1 rounded-tl-[50px] rounded-bl-[50px] border-none outline-none font-poppins text-[16px] text-gray-950 placeholder:text-gray-500">
                 <button id="btn" class="py-[15px] px-[35px] bg-[#4E9F3D] rounded-[50px] font-poppins text-white text-[16px] font-medium border-none outline-none cursor-pointer">Add</button>
             </div>
-            <div class="w-full min-h-[40px] px-2 mt-6">
-                <ul class="w-full block space-y-4">
-                    <li id="task" class="w-full flex items-center justify-between cursor-pointer">
-                        <div class="w-auto flex items-center justify-center gap-3">
-                            <img id="check-uncheck" src="./img/checked.png" alt="check icon" class="w-6 h-6">
-                            <p id="task-text" class="font-poppins text-[16px] font-medium text-gray-700 line-through">Task</p>
-                        </div>
-                        <button id="close" class="w-[25px] h-[25px] rounded-full cursor-pointer transition-all ease-linear duration-75 hover:bg-gray-200">
-                            <i class="ri-close-line text-gray-950"></i>
-                        </button>
-                    </li>
-                    <li id="task" class="w-full flex items-center justify-between cursor-pointer">
-                        <div class="w-auto flex items-center justify-center gap-3">
-                            <img id="check-uncheck" src="./img/unchecked.png" alt="check icon" class="w-6 h-6">
-                            <p id="task-text" class="font-poppins text-[16px] font-medium text-gray-700">Task</p>
-                        </div>
-                        <button id="close" class="w-[25px] h-[25px] rounded-full cursor-pointer transition-all ease-linear duration-75 hover:bg-gray-200">
-                            <i class="ri-close-line text-gray-950"></i>
-                        </button>
-                    </li>
-                    <li id="task" class="w-full flex items-center justify-between cursor-pointer">
-                        <div class="w-auto flex items-center justify-center gap-3">
-                            <img id="check-uncheck" src="./img/unchecked.png" alt="check icon" class="w-6 h-6">
-                            <p id="task-text" class="font-poppins text-[16px] font-medium text-gray-700">Task</p>
-                        </div>
-                        <button id="close" class="w-[25px] h-[25px] rounded-full cursor-pointer transition-all ease-linear duration-75 hover:bg-gray-200">
-                            <i class="ri-close-line text-gray-950"></i>
-                        </button>
-                    </li>
-                </ul>
+            <div class="w-full px-2 mt-6">
+                <ul id="list-container" class="w-full block space-y-4"></ul>
             </div>
         </div>
     </div>
