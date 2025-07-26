@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- ------------------------------ title -->
-    <title>Document</title>
+    <title>Todo App - JavaScript</title>
     <!-- ------------------------------ favicon -->
     <link rel="shortcut icon" href="./img/icon.png" type="image/x-icon">
+    <!-- ------------------------------ remix icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- ------------------------------ google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,8 +16,51 @@
     <!-- ------------------------------ tailwind -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    
+<body class="w-full min-h-screen bg-[#021526] flex items-center justify-center">
+    <div id="todo-container" class="w-[90%] max-w-[450px] min-h-[100px] bg-white rounded-xl p-4 md:p-6">
+        <div id="todo-row-container" class="flex flex-col items-center justify-center">
+            <div id="logo-box" class="w-full flex items-center justify-start gap-2">
+                <h1 class="font-poppins text-2xl font-bold text-slate-950">Todo </h1>
+                <img src="./img/icon.png" alt="logo" class="w-[28px] h-[28px]">
+            </div>
+            <div id="input-and-btn-box" class="w-full bg-gray-200 rounded-[50px] flex items-center justify-between mt-5">
+                <input id="input-box" type="text" placeholder="Add your task" spellcheck="false" autocomplete="off" class="bg-transparent py-[15px] pl-[25px] pr-3 flex-1 rounded-tl-[50px] rounded-bl-[50px] border-none outline-none font-poppins text-[16px] text-gray-950 placeholder:text-gray-500">
+                <button id="btn" class="py-[15px] px-[35px] bg-[#4E9F3D] rounded-[50px] font-poppins text-white text-[16px] font-medium border-none outline-none cursor-pointer">Add</button>
+            </div>
+            <div class="w-full min-h-[40px] px-2 mt-6">
+                <ul class="w-full block space-y-4">
+                    <li id="task" class="w-full flex items-center justify-between cursor-pointer">
+                        <div class="w-auto flex items-center justify-center gap-3">
+                            <img id="check-uncheck" src="./img/checked.png" alt="check icon" class="w-6 h-6">
+                            <p id="task-text" class="font-poppins text-[16px] font-medium text-gray-700 line-through">Task</p>
+                        </div>
+                        <button id="close" class="w-[25px] h-[25px] rounded-full cursor-pointer transition-all ease-linear duration-75 hover:bg-gray-200">
+                            <i class="ri-close-line text-gray-950"></i>
+                        </button>
+                    </li>
+                    <li id="task" class="w-full flex items-center justify-between cursor-pointer">
+                        <div class="w-auto flex items-center justify-center gap-3">
+                            <img id="check-uncheck" src="./img/unchecked.png" alt="check icon" class="w-6 h-6">
+                            <p id="task-text" class="font-poppins text-[16px] font-medium text-gray-700">Task</p>
+                        </div>
+                        <button id="close" class="w-[25px] h-[25px] rounded-full cursor-pointer transition-all ease-linear duration-75 hover:bg-gray-200">
+                            <i class="ri-close-line text-gray-950"></i>
+                        </button>
+                    </li>
+                    <li id="task" class="w-full flex items-center justify-between cursor-pointer">
+                        <div class="w-auto flex items-center justify-center gap-3">
+                            <img id="check-uncheck" src="./img/unchecked.png" alt="check icon" class="w-6 h-6">
+                            <p id="task-text" class="font-poppins text-[16px] font-medium text-gray-700">Task</p>
+                        </div>
+                        <button id="close" class="w-[25px] h-[25px] rounded-full cursor-pointer transition-all ease-linear duration-75 hover:bg-gray-200">
+                            <i class="ri-close-line text-gray-950"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
     <!-- ------------------------------ script -->
     <script src="./js/script.js"></script>
 </body>
